@@ -1,7 +1,7 @@
 {
     "env": {
         "browser": true,
-        "es6": true
+        "es2021": true
     },
     "extends": [
         "plugin:react/recommended",
@@ -41,6 +41,8 @@
         ],
         "react/jsx-props-no-spreading": "off",
         "import/no-unresolved": "off",
-        "react/react-in-jsx-scope": "off"
+        "react/react-in-jsx-scope": "off",
+        "indent": "off",
+        "camelcase": "off"
     }
 }
