@@ -43,6 +43,7 @@
         "import/no-unresolved": "off",
         "react/react-in-jsx-scope": "off",
         "indent": "off",
-        "camelcase": "off"
+        "camelcase": "off",
+        "no-case-declarations": "off"
     }
 }
