@@ -44,6 +44,7 @@
         "react/react-in-jsx-scope": "off",
         "indent": "off",
         "camelcase": "off",
-        "no-case-declarations": "off"
+        "no-case-declarations": "off",
+        "jsx-a11y/anchor-is-valid": "off"
     }
 }

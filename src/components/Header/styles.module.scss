@@ -29,6 +29,10 @@
         margin-left: 2rem;
       }
 
+      &.active {
+        color: var(--white);
+      }
+
       &:hover {
         color: var(--white);
       }
