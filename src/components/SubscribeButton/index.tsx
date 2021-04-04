@@ -3,11 +3,7 @@ import { api } from '../../services/api';
 import { getStripeJs } from '../../services/stripe-js';
 import styles from './styles.module.scss';
 
-interface SubscribeButtonProps {
-  priceId: string;
-}
-
-const SubscribeButton = ({ priceId }: SubscribeButtonProps) => {
+export const SubscribeButton = () => {
   const [session] = useSession();
 
   const handleSubscribe = async () => {
@@ -33,5 +29,3 @@ const SubscribeButton = ({ priceId }: SubscribeButtonProps) => {
     </button>
   );
 };
-
-export default SubscribeButton;

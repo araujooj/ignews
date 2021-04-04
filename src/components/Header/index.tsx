@@ -1,8 +1,8 @@
 import Link from 'next/link';
-import SignInButton from '../SignInButton';
+import { SignInButton } from '../SignInButton';
 import styles from './styles.module.scss';
 
-function Header() {
+export function Header() {
   return (
     <header className={styles.headerContainer}>
       <div className={styles.headerContent}>
@@ -18,5 +18,3 @@ function Header() {
     </header>
   );
 }
-
-export default Header;
