@@ -11,11 +11,7 @@ export async function saveSubscription(
     q.Select('ref', q.Get(q.Match(q.Index('user_by_stripe_customer_id'), customerId))),
   );
 
-  console.log(userRef);
-
   const subscription = await stripe.subscriptions.retrieve(subscriptionId);
-
-  console.log(subscription);
 
   const subscriptionData = {
     id: subscription.id,
@@ -23,8 +19,6 @@ export async function saveSubscription(
     status: subscription.status,
     price_id: subscription.items.data[0].price.id,
   };
-
-  console.log(subscriptionData);
 
   if (isCreateAction) {
     await fauna.query(q.Create(q.Collection('subscriptions'), { data: subscriptionData }));
@@ -35,7 +29,7 @@ export async function saveSubscription(
     );
     await fauna.query(
       q.Replace(getSubscriptionRef, {
-        data: { subscriptionData },
+        data: subscriptionData,
       }),
     );
   }
